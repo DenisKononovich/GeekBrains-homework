@@ -1,18 +1,21 @@
+/**
+ * Java 1. Homework 2
+ *
+ * @author Denis Kononovich
+ * @version 07.10.21
+ */
+
 class HomeWork2App {
     public static void main(String[] args) {
-        compareSumAndReturnBoolean(4, 17);
+        checkSumInIntervalAndReturnBoolean(4, 17);
         checkNumberAndPrintValue(-2);
         returnBooleanValueOfNumber(0);
         printStringRepeatedly("test", 2);
         determineLeapYearAndReturnBoolean(2021);
     }
 
-    static boolean compareSumAndReturnBoolean(int a, int b) {
-        if (a + b >= 10 && a + b <= 20) {
-            return true;
-        } else {
-            return false;
-        }
+    static boolean checkSumInIntervalAndReturnBoolean(int a, int b) {
+        return a + b >= 10 && a + b <= 20;
     }
 
     static void checkNumberAndPrintValue(int a) {
@@ -24,22 +27,16 @@ class HomeWork2App {
     }
 
     static boolean returnBooleanValueOfNumber(int a) {
-        if (a > 0) {
-            return false;
-        }
-        return true;
+        return a <= 0;
     }
 
-    static void printStringRepeatedly(String word, int a) {
+    static void printStringRepeatedly(String string, int a) {
         for (int i = 0; i < a; i++) {
-            System.out.println(word);
+            System.out.println(string);
         }
     }
 
     static boolean determineLeapYearAndReturnBoolean(int a) {
-        if ((a % 400 == 0) || ((a % 4 == 0) && (a % 100 != 0))) {
-            return true;
-        }
-        return false;
+        return (a % 400 == 0) || ((a % 4 == 0) && (a % 100 != 0));
     }
 }
