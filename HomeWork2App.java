@@ -19,11 +19,7 @@ class HomeWork2App {
     }
 
     static void checkNumberAndPrintValue(int a) {
-        if (a >= 0) {
-            System.out.println("Положительное");
-        } else {
-            System.out.println("Отрицательное");
-        }
+        System.out.println(a >= 0 ? "Положительное" : "Отрицательное");
     }
 
     static boolean returnBooleanValueOfNumber(int a) {
