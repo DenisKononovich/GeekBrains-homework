@@ -52,9 +52,10 @@ class HomeWork3App {
         }
     }
 
-    static void returnArrayRepeatedly(int len, int initialValue) {
+    static int[] returnArrayRepeatedly(int len, int initialValue) {
         int[] arr = new int[len];
         Arrays.fill(arr, initialValue);
+        return arr;
     }
 
     static void findMinAndMax() {
