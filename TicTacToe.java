@@ -77,7 +77,7 @@ class TicTacToe {
             System.out.print("Enter [1..3] x y: ");
             x = scanner.nextInt() - 1;
             y = scanner.nextInt() - 1;
-        } while (!isCellValid(x, y));
+        } while (isCellValid(x, y));
         table[x][y] = SIGN_X;
     }
 
@@ -86,15 +86,15 @@ class TicTacToe {
         do {
             x = random.nextInt(3);
             y = random.nextInt(3);
-        } while (!isCellValid(x, y));
+        } while (isCellValid(x, y));
         table[x][y] = SIGN_O;
     }
 
     boolean isCellValid(int x, int y) {
         if (x < 0 || x > 2 || y < 0 || y > 2) {
-            return false;
+            return true;
         }
-        return table[x][y] == SIGN_EMPTY;
+        return table[x][y] != SIGN_EMPTY;
     }
 
     boolean isWin(char ch) {
