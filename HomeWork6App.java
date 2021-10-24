@@ -74,11 +74,6 @@ abstract class Animal implements IAnimal {
             return className + " проплыл " + distance + " м.";
         }
     }
-
-    @Override
-    public String toString() {
-        return "бег: " + className + " " + runRange + " м.," + " плавание " + className + " " + swimRange + " м.";
-    }
 }
 
 interface IAnimal {
